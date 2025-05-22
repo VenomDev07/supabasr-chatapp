@@ -1,26 +1,171 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html, body, #__next {
+  overflow: hidden;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+#container{
+  display: grid;
+  grid-template-columns: 50px 2fr 2fr 50px;
+  grid-template-rows: 40px 2fr 2fr 2fr;
+  grid-template-areas: 
+    "sidebar  header  header  header"
+    "sidebar  main  main  rightsidebar"
+    "sidebar  main  main  rightsidebar"
+    "sidebar  main  main  rightsidebar"
+  ;
+  justify-content: center;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+#header{
+  grid-area: header;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+#main{
+  grid-area: main;
+}
+
+#sidebar{
+  grid-area: sidebar;
+}
+
+#rightsidebar{
+  grid-area: rightsidebar;
+}
+
+.buttonShadow{
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+/* Chat */
+
+.chat-container{
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: 
+    "userBar  chatWindow"
+    "userBar  chatWindow"
+  ;
+  justify-content: center;
+}
+
+.user-bar{
+  grid-area: userBar;
+}
+
+.chat-window{
+  grid-area: chatWindow;
+}
+
+/* Invisible Scroll Bar */
+
+/* For Webkit browsers (Chrome, Safari) */
+.invisible-scrollbar::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+
+/* Optional: Prevent scrollbar thumb from being shown */
+.invisible-scrollbar::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+
+/* For Firefox */
+.invisible-scrollbar {
+  scrollbar-width: none; /* Firefox */
+}
+
+/* For IE & Edge */
+.invisible-scrollbar {
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+/* chat-window */
+
+.chat-window-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr ;
+  grid-template-rows: 45px 1fr 75px;
+  grid-template-areas: 
+    "chatHeader   chatHeader    chatHeader"
+    "chatContent  chatContent   chatContent"
+    "chatFooter   chatFooter    chatFooter"
+  ;
+}
+
+#chatHeader{
+  grid-area: chatHeader;
+}
+
+#chatContent{
+  grid-area: chatContent;
+}
+
+#chatFooter{
+  grid-area: chatFooter;
+}
+
+/* WhatsApp Desktop-like Custom Scrollbar */
+.chat-window-scroll {
+  /* Custom scrollbar for webkit browsers (Chrome, Safari, Edge) */
+  scrollbar-width: thin;
+  scrollbar-color: rgba(134, 150, 160, 0.5) transparent;
+}
+
+/* Webkit scrollbar styling */
+.chat-window-scroll::-webkit-scrollbar {
+  width: 6px;
+  background: transparent;
+}
+
+.chat-window-scroll::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 3px;
+}
+
+.chat-window-scroll::-webkit-scrollbar-thumb {
+  background-color: rgba(134, 150, 160, 0.4);
+  border-radius: 3px;
+  transition: background-color 0.2s ease;
+}
+
+.chat-window-scroll::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(134, 150, 160, 0.7);
+}
+
+.chat-window-scroll::-webkit-scrollbar-thumb:active {
+  background-color: rgba(134, 150, 160, 0.8);
+}
+
+/* Hide scrollbar when not scrolling (auto-hide behavior) */
+.chat-window-scroll {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* Smooth scrolling behavior */
+.chat-window-scroll {
+  scroll-behavior: smooth;
+}
+
+/* For better performance on mobile */
+.chat-window-scroll {
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Auto-hide scrollbar effect (optional) */
+.chat-window-scroll:not(:hover)::-webkit-scrollbar-thumb {
+  background-color: rgba(134, 150, 160, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+/* Focus state for accessibility */
+.chat-window-scroll:focus-visible {
+  outline: none;
 }
