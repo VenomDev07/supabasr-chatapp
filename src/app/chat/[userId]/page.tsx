@@ -2,7 +2,6 @@
 
 import ChatWindow from '@/component/ChatWindow'
 import { FolderDown, ListFilter, Search } from 'lucide-react'
-import { useParams } from 'next/navigation'
 import { useEffect, useState } from 'react';
 import { useAuth } from '@/app/lib/useAuth';
 import { getUserList, User } from '@/app/lib/chatService';
