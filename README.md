@@ -2,7 +2,7 @@
 
 This is a real-time chat application built as part of an assignment for Periskope.
 
-![Chat Screenshot](./2b9bbb90-f21d-423a-ad0d-2180ef8bbb26.png)
+![Chat Screenshot](https://github.com/VenomDev07/supabasr-chatapp/blob/main/public/images/image.png)
 
 ## 🚀 Tech Stack
 
@@ -10,7 +10,7 @@ This is a real-time chat application built as part of an assignment for Periskop
 - **Language:** TypeScript
 - **Styling:** Tailwind CSS
 - **Backend:** Supabase (Auth, Realtime Database)
-- **Icons:** [React Icons](https://react-icons.github.io/react-icons)
+- **Icons:** [lucide-react](https://github.com/lucide-icons/lucide/tree/main/packages/lucide-react)
 
 ## ✅ Features Implemented
 
@@ -73,7 +73,7 @@ npm run dev
 
 ## 🤖 AI Usage
 
-I used AI (ChatGPT) to:
+I used AI (Claude) to:
 - Resolve TypeScript issues and typing errors
 - Fix ESLint and build-time errors
 
