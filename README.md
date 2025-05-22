@@ -17,6 +17,7 @@ This is a real-time chat application built as part of an assignment for Periskop
 - 🔐 **Authentication:**
   - Login screen styled to match the given UI.
   - Supabase auth used for secure login.
+  - Logout functionality accessible via the icon located in the top-right sidebar.
 
 - 💬 **Chat Functionality:**
   - Real-time chat using Supabase Realtime.
@@ -31,18 +32,25 @@ This is a real-time chat application built as part of an assignment for Periskop
   - Carefully matched to the provided screenshot.
   - All icons and buttons are implemented as shown (some peripheral buttons are non-functional, per instructions).
 
-## ❌ Features Not Implemented
 
-- Optional Tasks:
-  - Filters and search for chats
-  - Labels for chats
-  - Assigning members to chats
+## 🔑 Demo Credentials
 
-- Bonus Points Not Implemented:
-  - Group chat
-  - IndexedDB storage
-  - Video/file attachments
-  - Semantic HTML throughout
+You can use the following credentials to test the app:
+
+- **Email:** devendra.salokhe07@gmail.com 
+- **Password:** 1234567
+
+## 🔮 Future Enhancements (Planned)
+
+While the core chat functionality is fully implemented, the following features are on the roadmap to elevate the user experience further:
+
+- 🔍 **Chat Filters & Search** – Quickly find conversations or messages using advanced filtering and search options.
+- 🏷️ **Chat Labels** – Organize conversations using custom labels and tags.
+- 👥 **Member Assignment** – Assign team members to specific chats for better collaboration.
+- 💬 **Group Chat Support** – Enable real-time conversations between multiple users.
+- 🧠 **IndexedDB Caching** – Improve performance and offline support by storing data locally in the browser.
+- 📎 **Rich Media Support** – Expand attachments to include videos, documents, and other file types.
+- 🔧 **Semantic HTML** – Refactor UI using semantic elements for accessibility and SEO.
 
 ## 📂 Folder Structure (Brief)
 
