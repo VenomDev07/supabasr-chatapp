@@ -4,6 +4,8 @@ import { AlignLeft, CircleUserRound, Clock, ClockFading, Mic, Paperclip, Search,
 import React, { useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
 import MessageItems from './ChatComponent/messageItems';
+import { RealtimeChannel } from '@supabase/supabase-js';
+
 
 
 interface ChatWindowProps {
@@ -19,7 +21,8 @@ function ChatWindow({selectedUser}:ChatWindowProps) {
   const [text, setText] = useState('');
   const [sending, setSending] = useState(false);
   const [image, setImage] = useState<string | null>(null);
-
+  console.log(sending);
+  
   // Fetch messages when selected user changes
   const fetchMessages = async () => {
   debugger
@@ -37,18 +40,19 @@ function ChatWindow({selectedUser}:ChatWindowProps) {
   }, [user?.id, selectedUser?.id]);
 
   // Subscribe to new messages
-  useEffect(() => {
-    let subscription: any;
-    
+    useEffect(() => {
+    let subscription: RealtimeChannel ;
+      
+    const setupSubscription = async () => {
     if (user?.id) {
-      subscription = subscribeToMessages(user.id, (newMessage) => {
-        // Only add to current conversation if it's from the selected user
+      subscription = await subscribeToMessages(user.id, (newMessage) => {
         if (selectedUser && newMessage.sender_id === selectedUser.id) {
-          setMessages(prev => [...prev, newMessage]);
+          setMessages((prev) => [...prev, newMessage]);
         }
       });
     }
-
+  };
+   setupSubscription();
     return () => {
       if (subscription?.unsubscribe && typeof subscription.unsubscribe === 'function') {
             subscription.unsubscribe();

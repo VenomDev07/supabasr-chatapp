@@ -1,14 +1,14 @@
 'use client'
 
 import ChatWindow from '@/component/ChatWindow'
-import { FolderDown, HelpCircle, ListFilter, Phone, Search } from 'lucide-react'
+import { FolderDown, ListFilter, Search } from 'lucide-react'
 import { useParams } from 'next/navigation'
 import { useEffect, useState } from 'react';
 import { useAuth } from '@/app/lib/useAuth';
 import { getUserList, User } from '@/app/lib/chatService';
 import ChatUserItems from '@/component/ChatComponent/chatUserItems';
 
-function page() {
+function Page() {
 
   const [selectedUser, setSelectedUser] = useState<User | null>(null);
 
@@ -33,7 +33,6 @@ function page() {
     fetchUsers();
   }, [user?.id]);
 
-  const userId = String(useParams())
   return (
     <main className='w-full h-full chat-container'>
         <div className='user-bar'>
@@ -82,4 +81,4 @@ function page() {
   )
 }
 
-export default page
+export default Page

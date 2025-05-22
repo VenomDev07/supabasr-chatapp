@@ -87,7 +87,7 @@ export async function subscribeToMessages(
         schema: 'public',
         table: 'formmessages',
       },
-      (payload:any) => {
+      (payload) => {
         const newMessage = payload.new;
         if (newMessage.sender_id === userId || newMessage.receiver_id === userId) {
           const fetchSenderInfo = async () => {

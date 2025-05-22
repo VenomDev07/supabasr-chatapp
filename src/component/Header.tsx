@@ -1,12 +1,8 @@
 'use client';
 
 import React from 'react';
-import { 
-  CircleDot, 
-  RotateCw, 
+import {  
   HelpCircle, 
-  ExternalLink, 
-  Bell, 
   List,
   MessageCircleMore,
   RefreshCcwDot,

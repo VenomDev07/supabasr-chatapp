@@ -7,7 +7,7 @@ import { User } from '@supabase/supabase-js';
 type AuthContextType = {
   user: User | null;
   loading: boolean;
-  signIn: (email: string, password: string) => Promise<{ error: any } | null>;
+  signIn: (email: string, password: string) => Promise<{ error: unknown } | null>;
   signOut: () => Promise<void>;
 };
 
@@ -41,7 +41,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
   const signIn = async (email: string, password: string) => {
     try {
-      const { data, error } = await supabase.auth.signInWithPassword({
+      const { error } = await supabase.auth.signInWithPassword({
         email,
         password,
       });

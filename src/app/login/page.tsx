@@ -28,7 +28,9 @@ export default function LoginPage() {
     const result = await signIn(form.email, form.password);
     
     if (result?.error) {
-      setError(result.error.message || 'Failed to sign in');
+      if (typeof result.error === 'string') {
+        setError(result.error || 'Failed to sign in');
+      }
       setLoading(false);
     } else {
       router.push('/chat/101');

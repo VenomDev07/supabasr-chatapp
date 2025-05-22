@@ -17,12 +17,16 @@ import { useAuth } from '@/app/lib/useAuth';
 
 export default function RightSidebar() {
   const [activeIcon, setActiveIcon] = useState('home');
-  const { user, signOut } = useAuth();
+  const { signOut } = useAuth();
   const router = useRouter()
-  const setActivateOrHandleLogOut = (id:string) =>{
-    debugger
-    id === 'ArrowLeftFromLine' ? (signOut(),router.push('/login')) : setActiveIcon(id)
+  const setActivateOrHandleLogOut = (id: string) => {
+  if (id === 'ArrowLeftFromLine') {
+    signOut();
+    router.push('/login');
+  } else {
+    setActiveIcon(id);
   }
+};
 
   const menuItems = [
     { id: 'ArrowLeftFromLine', icon: <ArrowLeftFromLine key="square" color='#b3b3b3' size={20} />, label: 'ArrowLeftFromLine', topSection: true, special: true },

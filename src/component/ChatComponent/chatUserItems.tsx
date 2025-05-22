@@ -2,7 +2,6 @@ import { Phone } from 'lucide-react';
 import React from 'react'
 import dayjs from 'dayjs';
 import relativeTime from 'dayjs/plugin/relativeTime';
-import updateLocale from 'dayjs/plugin/updateLocale';
 
 
 // extend once globally
@@ -35,7 +34,7 @@ type ChatUserItemProps = {
   lastMessage?: string;
 };
 
-function ChatUserItems({ user, isActive, onClick, lastMessage }: ChatUserItemProps) {
+function ChatUserItems({ user, onClick }: ChatUserItemProps) {
 
     const getInitials = (name: string) => {
     return name
