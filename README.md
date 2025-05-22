@@ -68,17 +68,14 @@ npm run dev
 
 ## 🔗 Links
 
-- **Live App:** [https://your-vercel-link.vercel.app](https://your-vercel-link.vercel.app)
-- **GitHub Repo:** [https://github.com/yourusername/chat-app](https://github.com/yourusername/chat-app)
+- **Live App:** [https://supabasr-chatapp-es84.vercel.app/](https://supabasr-chatapp-es84.vercel.app/)
+- **GitHub Repo:** [https://github.com/VenomDev07/supabasr-chatapp](https://github.com/VenomDev07/supabasr-chatapp)
 
 ## 🤖 AI Usage
 
 I used AI (ChatGPT) to:
 - Resolve TypeScript issues and typing errors
 - Fix ESLint and build-time errors
-- Optimize useEffect logic
-- Implement Supabase Realtime integration
-- Structure and polish this README
 
 ---
 
