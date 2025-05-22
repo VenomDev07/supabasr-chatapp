@@ -79,4 +79,4 @@ I used AI (ChatGPT) to:
 
 ---
 
-> Built with ❤️ and Tailwind by [Your Name]
+> Built with ❤️ and Tailwind by Dev
