@@ -141,7 +141,7 @@ function ChatWindow({selectedUser}:ChatWindowProps) {
           <div className='h-full w-full overflow-hidden relative'>
             {/* Background Image Layer */}
             <Image 
-              src='/images/wp.png' 
+              src='/images/wp2.png' 
               alt=""
               fill
               className="w-full h-auto max-h-auto min-h-48 object-cover"

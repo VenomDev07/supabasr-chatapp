@@ -9,6 +9,7 @@ html, body, #__next {
   overflow: hidden;
 }
 
+/* MAIN PAGE LAYOUT */
 #container{
   display: grid;
   grid-template-columns: 50px 2fr 2fr 50px;
